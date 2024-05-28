@@ -1,0 +1,87 @@
+<div class="card">
+  <div class="card-body">
+    <h4 class="mb-32 text-center fw-bold text-uppercase">Formulario Para Registrar un Nuevo Pastel</h4>
+    <form (ngSubmit)="onSubmit()">
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <mat-form-field class="w-100">
+            <mat-label class="fs-16">Nombre del Pastel</mat-label>
+            <input matInput type="text" placeholder="Escribe el nombre del pastel" [(ngModel)]="nombre" name="nombre">
+          </mat-form-field>
+        </div>
+        <div class="col-md-6">
+          <mat-form-field class="w-100">
+            <mat-label class="fs-16">Tipo de Pastel</mat-label>
+            <input matInput type="text" placeholder="Escribe el tipo de pastel" [(ngModel)]="tipo" name="tipo">
+          </mat-form-field>
+        </div>
+      </div>
+      
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <mat-form-field class="w-100">
+            <mat-label class="fs-16">Sabor del Pastel</mat-label>
+            <input matInput type="text" placeholder="Escribe el sabor del pastel" [(ngModel)]="sabor" name="sabor">
+          </mat-form-field>
+        </div>
+        <div class="col-md-6">
+          <mat-form-field class="w-100">
+            <mat-label class="fs-16">Tamaño del Pastel</mat-label>
+            <input matInput type="text" placeholder="Escribe el tamaño del pastel" [(ngModel)]="tamano" name="tamano">
+          </mat-form-field>
+        </div>
+      </div>
+      
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <mat-form-field class="w-100">
+            <mat-label class="fs-16">Ingredientes</mat-label>
+            <textarea matInput rows="6" placeholder="Escribe los ingredientes del pastel" [(ngModel)]="ingredientes" name="ingredientes"></textarea>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6">
+          <mat-form-field class="w-100">
+            <mat-label class="fs-16">Descripción</mat-label>
+            <textarea matInput rows="6" placeholder="Coloca una descripción del pastel" [(ngModel)]="descripcion" name="descripcion"></textarea>
+          </mat-form-field>
+        </div>
+      </div>
+      
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <mat-form-field class="w-100">
+            <mat-label class="fs-16">Precio</mat-label>
+            <input matInput type="number" placeholder="Escribe el precio del pastel" [(ngModel)]="precio" name="precio">
+          </mat-form-field>
+        </div>
+        <div class="col-md-6">
+          <mat-form-field class="w-100">
+            <mat-label class="fs-16">Stock Disponible</mat-label>
+            <input matInput type="number" placeholder="Escribe el stock disponible" [(ngModel)]="stock" name="stock">
+          </mat-form-field>
+        </div>
+      </div>
+      
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <mat-form-field class="w-100">
+            <mat-label class="fs-16">Fecha de Vencimiento</mat-label>
+            <input matInput [matDatepicker]="picker" placeholder="Selecciona la fecha de vencimiento del pastel" [(ngModel)]="fecha" name="fecha">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6">
+          <mat-form-field class="w-100">
+            <mat-label class="fs-16">Peso del Pastel</mat-label>
+            <input matInput type="text" placeholder="Escribe el peso del pastel" [(ngModel)]="peso" name="peso">
+          </mat-form-field>
+        </div>
+      </div>
+      
+      <div class="text-center">
+        <button mat-raised-button class="btn-lg btn-primary btn-block" color="primary" type="submit">Registrar Pastel</button>
+      </div>
+    </form>
+  </div>
+</div>
